@@ -101,12 +101,10 @@ const List = () => {
                <SearchItem item ={item} key={item._id} />
             ))}
             </>}
-            
           </div>
         </div>
       </div>
     </div>
   );
 };
-
 export default List;
