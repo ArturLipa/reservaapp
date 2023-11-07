@@ -1,17 +1,18 @@
-import{ Route, BrowserRouter, Routes } from 'react-router-dom'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Home from './pages/home/Home'
 import List from './pages/list/List'
 import Hotel from './pages/hotel/Hotel'
-const App =() =>{
-  return(
-    <BrowserRouter>
+import Login from './pages/login/Login'
+const App = () =>{
+  return (
+   <BrowserRouter>
       <Routes>
-         <Route path='/' element={<Home />} />
-         <Route path='/hotels' element={<List />} />
-         <Route path='/hotels/:id' element={<Hotel />} />      
+        <Route path='/' element={<Home />} />
+        <Route path='/hotels' element={<List />} />
+        <Route path='/hotels/:id' element={<Hotel />} />
+        <Route path='/login' element={<Login />} />
       </Routes>
-    </BrowserRouter>
+   </BrowserRouter>
   )
 }
-
 export default App

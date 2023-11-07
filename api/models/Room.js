@@ -1,23 +1,23 @@
 import mongoose from 'mongoose';
 
 const RoomSchema = new mongoose.Schema({
-  title: {
+title:{
     type: String,
-    required: true
-  },
-  price: {
+    required:true,
+},
+price:{
+    type: String,
+    required:true,
+},
+maxPeople:{
     type: Number,
-    required: true
-  },
-  maxPeople: {
-    type: Number, 
-    required: true
-  },
-  desc: {
+    required:true,
+},
+desc:{
     type: String,
-    required: false,
-  },
-  rooNumbers:[{number:Number, unavailableDates:{type:[Date]}}]
+    required:false,
+},
+rooNumber:[{number:Number,unavailableDates:{type:[Date]}}]
 
 },{timestamps:true});
 

@@ -11,7 +11,7 @@ const SearchItem = ({item}) => {
       />
       <div className="siDesc">
         <h1 className="siTitle">{item.name}</h1>
-        <span className="siDistance">{item.distance}m from</span>
+        <span className="siDistance">{item.distance}m from center</span>
         <span className="siTaxiOp">Free airport taxi</span>
         <span className="siSubtitle">
           Studio Apartment with Air conditioning
@@ -32,10 +32,10 @@ const SearchItem = ({item}) => {
         <div className="siDetailTexts">
           <span className="siPrice">{item.cheapestPrice}</span>
           <span className="siTaxOp">Includes taxes and fees</span>
-          <Link to={`/hotels/${item._id}` }> 
+          <Link to={`/hotels/${item._id}`}>
           <button className="siCheckButton">Ver disponibilidad</button>
-          </Link>
-        </div> 
+          </Link>        
+        </div>
       </div>
     </div>
   );
