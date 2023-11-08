@@ -15,9 +15,15 @@ maxPeople:{
 },
 desc:{
     type: String,
+<<<<<<< HEAD
+    required: false,
+  },
+  roomNumbers:[{number:Number, unavailableDates:{type:[Date]}}]
+=======
     required:false,
 },
 rooNumber:[{number:Number,unavailableDates:{type:[Date]}}]
+>>>>>>> 9daa32f7376718fca39fd86ea305e8cf0d623401
 
 },{timestamps:true});
 

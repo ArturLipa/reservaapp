@@ -35,7 +35,11 @@ const Header = ({ type }) => {
   });
 
   const navigate = useNavigate();
+<<<<<<< HEAD:reserva/src/components/header/Header.jsx
+  const {user} = useContext(AuthContex)
+=======
   const { user } = useContext(AuthContex);
+>>>>>>> 9daa32f7376718fca39fd86ea305e8cf0d623401:reservas/src/components/header/Header.jsx
 
 
   const handleOption = (name, operation) => {
@@ -91,10 +95,17 @@ const Header = ({ type }) => {
               ¿Una vida de descuentos? Es genial.
             </h1>
             <p className="headerDesc">
+<<<<<<< HEAD:reserva/src/components/header/Header.jsx
+              Reciba recompensas por sus viajes: desbloquee ahorros instantaneos del 10% o mas
+              con una cuenta gratuita
+            </p>
+            {!user && <button className="headerBtn">Iniciar sesion / Registro</button>}
+=======
               Reciba recompensas por sus viajes: desbloquee ahorros instantáneos del 10% o más con
               una cuenta gratuita
             </p>
              {!user && <button className="headerBtn">Iniciar sesion / Registro</button>}
+>>>>>>> 9daa32f7376718fca39fd86ea305e8cf0d623401:reservas/src/components/header/Header.jsx
             <div className="headerSearch">
               <div className="headerSearchItem">
                 <FontAwesomeIcon icon={faBed} className="headerIcon" />

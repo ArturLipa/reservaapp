@@ -12,9 +12,16 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { useContext, useEffect, useState } from "react";
 import useFetch from "./../../hooks/useFecth"
+<<<<<<< HEAD:reserva/src/pages/hotel/Hotel.jsx
+import { useLocation, useNavigate } from "react-router-dom";
+import { SearchContex } from "../../context/SearchContext";
+import { AuthContex } from "../../context/AuthContext";
+import Reserve from "../../components/reserve/Reserve";
+=======
 import { useInRouterContext, useLocation, useNavigate } from "react-router-dom";
 import { SearchContex } from "../../context/SearchContext";
 import { AuthContex } from "../../context/AuthContext";
+>>>>>>> 9daa32f7376718fca39fd86ea305e8cf0d623401:reservas/src/pages/hotel/Hotel.jsx
 
 const Hotel = () => {
   const location = useLocation()
@@ -22,7 +29,11 @@ const Hotel = () => {
   const [slideNumber, setSlideNumber] = useState(0);
   const [open, setOpen] = useState(false);
   const [openModal, setOpenModal] = useState(false);
+<<<<<<< HEAD:reserva/src/pages/hotel/Hotel.jsx
+  const [days, setDays] = useState();
+=======
   const [days, setDays] = useState(0);
+>>>>>>> 9daa32f7376718fca39fd86ea305e8cf0d623401:reservas/src/pages/hotel/Hotel.jsx
 
   const {data, loading, error, reFetch} = useFetch(`/hotels/find/${hId}`)
   const {user} = useContext(AuthContex)
@@ -93,11 +104,24 @@ const Hotel = () => {
     }
   }
 
+<<<<<<< HEAD:reserva/src/pages/hotel/Hotel.jsx
+  const handleClick = () =>{
+    if(user){
+      setOpenModal(true);
+    }else{
+      navigate("/login")
+    }
+  }
+
+  return (
+=======
    return(
+>>>>>>> 9daa32f7376718fca39fd86ea305e8cf0d623401:reservas/src/pages/hotel/Hotel.jsx
     <div>
       <Navbar />
       <Header type="list" />
-      <div className="hotelContainer">
+      {loading? ("Cargando..."):
+      (<div className="hotelContainer">
         {open && (
           <div className="slider">
             <FontAwesomeIcon
@@ -167,6 +191,9 @@ const Hotel = () => {
         <MailList />
         <Footer />
       </div>
+      )}
+
+      {openModal && <Reserve setOpen={setOpenModal} hotelId={hId} />}
     </div>
   );
 };

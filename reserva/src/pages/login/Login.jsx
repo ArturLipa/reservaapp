@@ -48,12 +48,6 @@ const Login = () => {
     }
 
 
-
-
-
-
-   
-
     return (
         <div className="container-login">
             <div className="main">
@@ -77,9 +71,9 @@ const Login = () => {
                     <input type="text" placeholder="Nombre de usuario" id="username" className="lInput" 
                     onChange={handleChange}
                     />
-                    <input type="password" placeholder="Contraseña" id="password" className="lInput"
-                    onChange={handleChange} 
-                    />  
+                    <input type="password" placeholder="Contraseña" id="password" className="lInput" 
+                    onChange={handleChange}
+                    />
                     <button className="lButton" onClick={login}>registrar</button>
                     {error && <span>{error.message}</span>}
                 
